@@ -14,15 +14,7 @@ export default function handler(req, res) {
     if (req.method === 'GET') {
       res.status(200).json({
         "words": [
-          "ağaç", "ev", "okul", "araba", "bilgisayar", "kitap", "telefon", "kalem", "defter", "masa",
-          "sandaly", "kapı", "pencere", "yatak", "çanta", "ayakkabı", "elma", "portakal", "muz", "sebze",
-          "meyve", "gözlük", "şapka", "cüzdan", "saat", "anahtar", "sofra", "tabak", "bardak", "çatal",
-          "bıçak", "kaşık", "peynir", "zeytin", "süt", "ekmek", "börek", "çorba", "yemek", "su", "çay",
-          "kahve", "dondurma", "şeker", "tatlı", "karnıbahar", "brokoli", "domates", "salata", "kola",
-          "bira", "şarap", "tatlı", "yaz", "kış", "bahar", "sonbahar", "güneş", "yağmur", "kar",
-          "rüzgar", "bulut", "deniz", "göl", "dağ", "ormanın", "park", "sokak", "cadde", "şehir",
-          "köy", "ev", "apartman", "yol", "köprü", "tünel", "trafi", "gece", "gündüz", "sabah",
-          "akşam", "öğlen", "büyüklük", "küçüklük", "uzunluk", "kısalık", "yükseklik", "alçaklık"
+          "ağaç", "ev", "okul", "araba", "bilgisayar", "kitap", "telefon", "kalem", "defter", "masa","sandalye", "kapı", "pencere", "yatak", "çanta", "ayakkabı", "elma", "portakal", "muz", "sebze","meyve", "gözlük", "şapka", "cüzdan", "saat", "anahtar", "sofra", "tabak", "bardak", "çatal","bıçak", "kaşık", "peynir", "zeytin", "süt", "ekmek", "börek", "çorba", "yemek", "su", "çay","kahve", "dondurma", "şeker", "tatlı", "karnıbahar", "brokoli", "domates", "salata", "kola","bira", "şarap", "tatlı", "yaz", "kış", "bahar", "sonbahar", "güneş", "yağmur", "kar","rüzgar", "bulut", "deniz", "göl", "dağ", "ormanın", "park", "sokak", "cadde", "şehir","köy", "ev", "apartman", "yol", "köprü", "tünel", "trafi", "gece", "gündüz", "sabah","akşam", "öğlen", "büyüklük", "küçüklük", "uzunluk", "kısalık", "yükseklik", "alçaklık"
         ]
       });
     } else {
