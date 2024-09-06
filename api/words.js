@@ -2,12 +2,18 @@
 export default function handler(req, res) {
     const clientKey = process.env.CLIENT_KEY; // Çevresel değişkenden API anahtarını al
   
+    // CORS başlıklarını ekleyin
+    res.setHeader('Access-Control-Allow-Origin', '*'); // Tüm alan adlarından erişime izin ver
+    res.setHeader('Access-Control-Allow-Methods', 'GET, OPTIONS'); // İzin verilen HTTP yöntemleri
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type, x-api-key'); // İzin verilen başlıklar
+   
+    if (req.method === 'OPTIONS') {
+      // Preflight isteği için cevap ver
+      res.status(200).end();
+      return;
+    }
+  
     if (req.method === 'GET') {
-      // CORS başlıklarını ekleyin
-      res.setHeader('Access-Control-Allow-Origin', '*'); // Tüm alan adlarından erişime izin ver
-      res.setHeader('Access-Control-Allow-Methods', 'GET, OPTIONS'); // İzin verilen HTTP yöntemleri
-      res.setHeader('Access-Control-Allow-Headers', 'Content-Type'); // İzin verilen başlıklar
-      
       // API anahtarını doğrulama
       const requestKey = req.headers['x-api-key']; // API anahtarını istekten al
       if (requestKey !== clientKey) {
