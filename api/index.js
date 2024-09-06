@@ -2,7 +2,7 @@ export default function handler(req, res) {
   if (req.method === 'GET') {
       // Sorgu parametrelerini al
       const { number } = req.query;
-      const numberOfWords = parseInt(number, 10) || 10; // Varsayılan olarak 10 kelime döndür
+      const numberOfWords = parseInt(number, 25) || 25; // Varsayılan olarak 10 kelime döndür
 
       // Kelime listesi
       const words = [
